@@ -90,6 +90,14 @@ class Login extends CI_Controller {
         $this->session->set_userdata('ses_user', $data['username']);
         redirect('index.php/Admin/index');
 
+       }elseif ($data['status']=='opver_all'){
+        $this->session->set_userdata('opver_all', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_user', $data['username']);
+        $this->session->set_userdata('ses_status_kompetensi', $data['status_kompetensi']);
+
+        redirect('index.php/Op_ver/index');
+
       }elseif ($data['status']=='opver_tjkt'){
         $this->session->set_userdata('opver_tjkt', true);
         $this->session->set_userdata('ses_id', $data['id_user']);
