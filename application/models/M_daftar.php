@@ -9,7 +9,7 @@ class M_daftar extends CI_Model{
 
   public function asal_sekolah()
   {
-    $this->db->order_by('nama_sekolah', 'ASC');
+    $this->db->order_by('asal_sekolah', 'ASC');
     $tampil = $this->db->get('tb_asal_sekolah')->result();
     return $tampil;
   }

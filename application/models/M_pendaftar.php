@@ -2,10 +2,25 @@
 
 class M_pendaftar extends CI_Model{
 
+  // tambahan atas
+
   public function siswa_daftar_up($data_tambah)
   {
     $this->db->insert('tb_siswa', $data_tambah);
   }
+
+  public function tambah_asal_sekolah($data_tambah)
+  {
+    $this->db->order_by('asal_sekolah', 'ASC');
+    $this->db->insert('tb_asal_sekolah', $data_tambah);
+  }
+
+  Public function asal_sekolah_tampil(){
+    $tampil = $this->db->get('tb_asal_sekolah')->result();
+    return $tampil;
+  }
+
+  // tambahan bawah
 
   function ver_semua()
   {

@@ -1,16 +1,16 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Op_daftar extends CI_Controller
+class Op_tambah_siswa extends CI_Controller
 {
 
   public function __construct()
   {
     parent::__construct();
     $this->load->model('M_daftar');
-    // $this->load->model('M_');
+    $this->load->model('M_pendaftar');
 
-    if ($this->session->userdata('op_daftar') != true) {
+    if ($this->session->userdata('op_tambah_siswa') != true) {
             $url = base_url('index.php/Login/fa');
             redirect($url);
         }
@@ -19,7 +19,7 @@ class Op_daftar extends CI_Controller
   //Login User
     public function index()
     {
-        $this->load->view('template/header-opdaftar.php');
+        $this->load->view('template/header-optambah-siswa.php');
         $this->load->view('op-tambah-siswa/dashboard');
         $this->load->view('template/footer-admin.php');
     }
@@ -31,7 +31,7 @@ class Op_daftar extends CI_Controller
         $data['tampil_kompetensi_1'] = $this->M_daftar->kompetensi_keahlian_1();
         $data['tampil_kompetensi_2'] = $this->M_daftar->kompetensi_keahlian_2();
 
-        $this->load->view('template/header-opdaftar.php');
+        $this->load->view('template/header-optambah-siswa.php');
         $this->load->view('op-tambah-siswa/siswa-daftar', $data);
         $this->load->view('template/footer-daftar.php');
     }
@@ -78,7 +78,7 @@ class Op_daftar extends CI_Controller
 
       $this->M_daftar->siswa_daftar_up($data_tambah);
 
-      $url = site_url('Daftar/index');
+      $url = site_url('Op_tambah_siswa/tambah_siswa');
       echo $this->session->set_flashdata('msg', '
 
        <div class="alert alert-info alert-dismissible fade show" role="alert">
@@ -94,7 +94,7 @@ class Op_daftar extends CI_Controller
   }
 
 
-  public function sekolah_tambah_up()
+  public function asal_sekolah_tambah_up()
   {
     $this->form_validation->set_rules('asal_sekolah','asal_sekolah', 'trim','required','min_length[3]');   
    
@@ -123,11 +123,12 @@ class Op_daftar extends CI_Controller
 
       $this->M_daftar->sekolah_tambah_up($data_tambah);
 
-      $url = site_url('Daftar/index');
+      $url = site_url('Op_tambah_siswa/asal_sekolah_tambah');
       echo $this->session->set_flashdata('msg', '
 
         <div class="alert alert-info alert-dismissible fade show" role="alert">
-          test
+            Tambah Data Asal Sekolah Berhasil
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         ');
       redirect($url);
@@ -137,6 +138,33 @@ class Op_daftar extends CI_Controller
   }
   // awal contoh
   
+  public function siswa_tampil()
+  {
+    $data['tampil'] = $this->M_pendaftar->siswa_tampil();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+
+  }
+
+  public function asal_sekolah_tampil()
+  {
+    $data['tampil'] = $this->M_pendaftar->asal_sekolah_tampil();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/asal-sekolah-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+
+  }
+
+  public function asal_sekolah_tambah()
+  {
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/asal-sekolah-tambah');
+    $this->load->view('template/footer-admin.php');
+
+  }
 
 
  

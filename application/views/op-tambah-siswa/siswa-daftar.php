@@ -8,7 +8,7 @@
             <div class="col-lg-10">
                 <div class=" mb-0">
                                     
-                    <?= form_open_multipart('index.php/Daftar/daftar_up') ?>
+                    <?= form_open_multipart('Op_tambah_siswa/daftar_up') ?>
                     <form>
                         <div class="row justify-content-center mt-0">
                            
@@ -40,7 +40,7 @@
                                     <select class="form-select" name="asal_sekolah" required>
                                         <option value="">Pilih</option>
                                         <?php foreach ($tampil as $row) { ?>
-                                            <option value="<?= $row->nama_sekolah ?>"><?= $row->nama_sekolah ?></option>
+                                            <option value="<?= $row->asal_sekolah ?>"><?= $row->asal_sekolah ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
