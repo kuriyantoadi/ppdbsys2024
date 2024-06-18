@@ -84,10 +84,10 @@
                                                         <th>Kompetensi Keahlian 2</th>
                                                         <td><?= $row->nama_kompetensi_2 ?></td>
                                                     </tr>
-                                                    <!-- <tr>
+                                                    <tr>
                                                         <th>No. Pendaftaran</th>
                                                         <td><?= $row->no_pendaftaran ?></td>
-                                                    </tr> -->
+                                                    </tr>
                                                     <tr>
                                                         <th>NISN</th>
                                                         <td><?= $row->nisn_siswa ?></td>
@@ -100,19 +100,19 @@
                                                         <th>Sekolah Asal</th>
                                                         <td><?= $row->asal_sekolah ?></td>
                                                     </tr>
-                                                    <!-- <tr>
+                                                    <tr>
                                                         <th>Tempat Lahir</th>
                                                         <td><?= $row->tempat_lahir ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Tanggal Lahir</th>
                                                         <td><?= $row->tgl_lahir ?></td>
-                                                    </tr> -->
+                                                    </tr>
                                                     <tr>
                                                         <th>No WA Siswa</th>
                                                         <td><?= $row->no_wa_siswa ?></td>
                                                     </tr>
-                                                    <!-- <tr>
+                                                    <tr>
                                                         <th>Alamat</th>
                                                         <td><?= $row->alamat ?></td>
                                                     </tr>
@@ -129,7 +129,7 @@
                                                         <td>
                                                             <embed type="application/pdf" src="<?= site_url('assets/upload_file/'.$row->pdf_pengajuan_pendaftaran) ?>" width="80%" height="600px"></embed>
                                                         </td>
-                                                    </tr> -->
+                                                    </tr>
                                                 </tbody>
                                                 <?php } ?>
                                             </table>

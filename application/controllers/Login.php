@@ -264,6 +264,13 @@ class Login extends CI_Controller {
         redirect('index.php/Op_wawancara_full/index');
 
         //akhir op wawancara full
+
+      }elseif ($data['status']=='op_tambah_siswa'){
+        $this->session->set_userdata('op_tambah_siswa', true);
+        $this->session->set_userdata('ses_id', $data['id_user']);
+        $this->session->set_userdata('ses_user', $data['username']);
+
+        redirect('index.php/Op_tambah_siswa/index');
         
       }else{
         echo $this->session->set_flashdata('msg', '

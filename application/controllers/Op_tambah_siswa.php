@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Daftar extends CI_Controller
+class Op_daftar extends CI_Controller
 {
 
   public function __construct()
@@ -9,19 +9,32 @@ class Daftar extends CI_Controller
     parent::__construct();
     $this->load->model('M_daftar');
     // $this->load->model('M_');
+
+    if ($this->session->userdata('op_daftar') != true) {
+            $url = base_url('index.php/Login/fa');
+            redirect($url);
+        }
   }
 
   //Login User
-  public function index()
-  {
-    $data['tampil'] = $this->M_daftar->asal_sekolah();
-    $data['tampil_kompetensi_1'] = $this->M_daftar->kompetensi_keahlian_1();
-    $data['tampil_kompetensi_2'] = $this->M_daftar->kompetensi_keahlian_2();
+    public function index()
+    {
+        $this->load->view('template/header-opdaftar.php');
+        $this->load->view('op-tambah-siswa/dashboard');
+        $this->load->view('template/footer-admin.php');
+    }
 
-    $this->load->view('template/header-daftar.php');
-    $this->load->view('siswa/siswa-daftar', $data);
-    $this->load->view('template/footer-daftar.php');
-  }
+
+    public function tambah_siswa()
+    {
+        $data['tampil'] = $this->M_daftar->asal_sekolah();
+        $data['tampil_kompetensi_1'] = $this->M_daftar->kompetensi_keahlian_1();
+        $data['tampil_kompetensi_2'] = $this->M_daftar->kompetensi_keahlian_2();
+
+        $this->load->view('template/header-opdaftar.php');
+        $this->load->view('op-tambah-siswa/siswa-daftar', $data);
+        $this->load->view('template/footer-daftar.php');
+    }
 
   public function daftar_up()
   {
