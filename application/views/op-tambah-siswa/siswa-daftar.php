@@ -29,7 +29,6 @@
                                     <label class="control-label" for="email">Kompetensi Keahlian Ke-2 :</label>
                                     <select class="form-select" name="id_kompetensi_2" required>
                                         <option value="">Pilih</option>
-                                        <option value="Hanya Pilih 1 Kompetensi Keahlian">Hanya Pilih 1 Kompetensi Keahlian</option>
                                         <?php foreach ($tampil_kompetensi_2 as $row) { ?>
                                             <option value="<?= $row->id_kompetensi_2 ?>"><?= $row->nama_kompetensi_2 ?></option>
                                         <?php } ?>
