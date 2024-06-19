@@ -32,9 +32,9 @@
                              <?= form_open('index.php/Op_ver/note_verifikasi_up') ?>
 
                             <div class="card-header">
-                                <a href="<?= site_url('index.php/admin/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                                <!-- <a href="<?= site_url('index.php/admin/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
                                 <a href="<?= site_url('index.php/admin/siswa_hapus/'.$row->id_siswa) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
-                                <a href="<?= site_url('index.php/admin/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a>
+                                <a href="<?= site_url('index.php/admin/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a> -->
                                  <div class="btn-group" role="group">
                                     <button id="btnGroupVerticalDrop1" type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Opsi <i class="mdi mdi-chevron-down"></i>

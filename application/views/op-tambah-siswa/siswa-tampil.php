@@ -26,13 +26,13 @@
                                <!-- <a href="<?= site_url('index.php/Admin/siswa_tambah') ?>" type="button" class="btn btn-info btn-sm mb-1">Tambah</a> -->
                                 <br>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="<?= site_url('index.php/Admin/siswa_tampil') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
-                                    <a href="<?= site_url('index.php/Admin/siswa_akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
-                                    <a href="<?= site_url('index.php/Admin/siswa_mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
-                                    <a href="<?= site_url('index.php/Admin/siswa_tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
-                                    <a href="<?= site_url('index.php/Admin/siswa_pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
-                                    <a href="<?= site_url('index.php/Admin/siswa_to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
-                                    <a href="<?= site_url('index.php/Admin/siswa_tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_tampil') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
+                                    <a href="<?= site_url('Op_tambah_siswa/siswa_tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
                                 </div>
                             </div><!-- end col -->
                         </div><!-- end row -->

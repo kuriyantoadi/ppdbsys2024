@@ -140,15 +140,7 @@ class Op_tambah_siswa extends CI_Controller
   }
   // awal contoh
   
-  public function siswa_tampil()
-  {
-    $data['tampil'] = $this->M_pendaftar->siswa_tampil();
-
-    $this->load->view('template/header-optambah-siswa.php');
-    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
-    $this->load->view('template/footer-admin.php');
-
-  }
+ 
 
   public function asal_sekolah_tampil()
   {
@@ -303,6 +295,74 @@ class Op_tambah_siswa extends CI_Controller
     ');
     redirect('Op_tambah_siswa/asal_sekolah_tampil');
   }
+
+  // cek siswa perjuruan awal
+
+  public function siswa_tampil()
+  {
+    $data['tampil'] = $this->M_pendaftar->siswa_tampil();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+
+  }
+
+  public function siswa_tjkt()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_tjkt();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_pplg()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_pplg();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_mplb()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_mplb();
+
+    $this->load->view('template/header-admin.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_akl()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_akl();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_tm()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_tm();
+
+   $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_to()
+  {
+    $data['tampil'] = $this->M_pendaftar->ver_to();
+
+   $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa-tampil', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  // cek siswa perjurusan akhir
 
 
  
