@@ -9,6 +9,8 @@ class Op_tambah_siswa extends CI_Controller
     parent::__construct();
     $this->load->model('M_daftar');
     $this->load->model('M_pendaftar');
+    $this->load->model('M_admin');
+
 
     if ($this->session->userdata('op_tambah_siswa') != true) {
             $url = base_url('index.php/Login/fa');
@@ -164,6 +166,89 @@ class Op_tambah_siswa extends CI_Controller
     $this->load->view('op-tambah-siswa/asal-sekolah-tambah');
     $this->load->view('template/footer-admin.php');
 
+  }
+
+  public function siswa_hapus($id_siswa){
+    $id_siswa = array('id_siswa' => $id_siswa);
+
+    $success = $this->M_admin->siswa_hapus($id_siswa);
+    $this->session->set_flashdata('msg', '
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            Hapus Data Siswa Berhasil
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    ');
+    redirect('Op_tambah_siswa/siswa_tampil');
+  }
+
+  public function siswa_detail($id_siswa)
+  {
+    $data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+    $data['tampil_1'] = $this->M_pendaftar->tampil_kompetensi_1();
+    $data['tampil_2'] = $this->M_pendaftar->tampil_kompetensi_2();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa_detail', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_edit($id_siswa)
+  {
+    $data['tampil_asal_sekolah'] = $this->M_pendaftar->asal_sekolah_tampil();
+
+    $data['tampil'] = $this->M_admin->siswa_edit($id_siswa);
+    $data['tampil_1'] = $this->M_pendaftar->tampil_kompetensi_1();
+    $data['tampil_2'] = $this->M_pendaftar->tampil_kompetensi_2();
+
+    $this->load->view('template/header-optambah-siswa.php');
+    $this->load->view('op-tambah-siswa/siswa_edit', $data);
+    $this->load->view('template/footer-admin.php');
+  }
+
+  public function siswa_edit_up()
+  {
+    $id_siswa = $this->input->post('id_siswa');
+    $this->form_validation->set_rules('id_kompetensi_1','Id_kompetensi_1', 'trim','required','min_length[1]');
+    $this->form_validation->set_rules('id_kompetensi_2','Id_kompetensi_2', 'trim','required','min_length[1]');
+    $this->form_validation->set_rules('nisn_siswa','Nisn_siswa', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('asal_sekolah','Asal_sekolah', 'trim','required','min_length[3]');
+    $this->form_validation->set_rules('nama_siswa','Nama_siswa', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('no_wa_siswa','No_wa_siswa', 'trim|required');
+   
+    if ($this->form_validation->run() == FALSE) {
+      
+      echo 'validasi error';  
+      $test = $this->form_validation->error_array();
+      var_dump($test);
+
+    } else {
+
+      $data_edit = array(
+
+        'id_kompetensi_1' => set_value('id_kompetensi_1'),
+        'id_kompetensi_2' => set_value('id_kompetensi_2'),
+        'nisn_siswa'   => set_value('nisn_siswa'),
+        'asal_sekolah'   => set_value('asal_sekolah'),
+        'nama_siswa'   => set_value('nama_siswa'),
+        'tempat_lahir'   => set_value('tempat_lahir'),
+        'tgl_lahir'   => set_value('tgl_lahir'),
+        'no_wa_siswa'   => set_value('no_wa_siswa'),
+
+      );
+
+      $this->M_admin->siswa_edit_up($data_edit, $id_siswa);
+
+      $this->session->set_flashdata('msg', '
+          <div class="alert alert-info alert-dismissible fade show" role="alert">
+            Edit Data Siswa Berhasil
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+           </div>');
+          // var_dump($id_siswa);
+      redirect('Op_tambah_siswa/siswa_detail/'.$id_siswa);
+
+    }
+
+    
   }
 
 

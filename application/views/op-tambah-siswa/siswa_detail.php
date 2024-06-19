@@ -31,10 +31,10 @@
                            <?php foreach ($tampil as $row) { ?>
 
                             <div class="card-header">
-                                <a href="<?= site_url('index.php/Op_ver/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                                <a href="<?= site_url('Op_tambah_siswa/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
                                 <!-- <a href="<?= site_url('index.php/Op_ver/siswa_hapus/'.$row->id_siswa) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a> -->
                                 <!-- <a href="<?= site_url('index.php/Op_ver/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a> -->
-                                 <div class="btn-group" role="group">
+                                 <!-- <div class="btn-group" role="group">
                                     <button id="btnGroupVerticalDrop1" type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Opsi <i class="mdi mdi-chevron-down"></i>
                                     </button>
@@ -43,7 +43,7 @@
                                         <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_proses/'.$row->id_siswa) ?>">Proses</a>
                                         <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="card-body p-4">
 
