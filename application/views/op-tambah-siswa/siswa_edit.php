@@ -74,7 +74,7 @@
                                         <option value="<?= $row->asal_sekolah ?>">Pilihan Awal = <?= $row->asal_sekolah ?></option>
                                     <?php } ?>
 
-                                    <?php foreach ($tampil_asal_sekolah as $row_1) { ?>
+                                    <?php foreach ($tampil_asal_sekolah as $row_3) { ?>
                                         <option value="<?= $row_3->row_asal_sekolah ?>">Pilihan Awal = <?= $row_3->asal_sekolah ?></option>
                                     <?php } ?>
                                 </select>
