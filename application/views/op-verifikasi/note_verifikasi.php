@@ -86,10 +86,10 @@
                                                         <th>Kompetensi Keahlian 2</th>
                                                         <td><?= $row->nama_kompetensi_2 ?></td>
                                                     </tr>
-                                                    <tr>
+                                                    <!-- <tr>
                                                         <th>No. Pendaftaran</th>
                                                         <td><?= $row->no_pendaftaran ?></td>
-                                                    </tr>
+                                                    </tr> -->
                                                     <tr>
                                                         <th>NISN</th>
                                                         <td><?= $row->nisn_siswa ?></td>
