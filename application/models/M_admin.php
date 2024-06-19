@@ -170,6 +170,32 @@ class M_admin extends CI_Model{
   // akhir operator adm
 
 
+  // awal asal sekolah
+
+  function asal_sekolah_edit_up($data_edit, $id_asal_sekolah)
+  {
+    $this->db->where('id_asal_sekolah', $id_asal_sekolah);
+    $this->db->update('tb_asal_sekolah', $data_edit);
+  }
+
+  public function asal_sekolah_hapus($id_asal_sekolah)
+  {
+    $this->db->where($id_asal_sekolah);
+    $this->db->delete('tb_asal_sekolah');
+  }
+
+  public function asal_sekolah_edit($id_asal_sekolah)
+  {
+    $this->db->select('*');
+    $this->db->from('tb_asal_sekolah');
+    $this->db->where('id_asal_sekolah', $id_asal_sekolah);
+    $query = $this->db->get()->result();
+    return $query;
+  }
+
+  // akhir asal sekolah
+
+
 }
 
  ?>

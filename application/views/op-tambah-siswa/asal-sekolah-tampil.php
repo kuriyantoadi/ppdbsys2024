@@ -41,17 +41,14 @@
                                     
                                     <td><center>
                                         <a type="button" class="btn btn-danger waves-effect waves-light btn-sm" title="hapus"
-                                        href="<?= site_url('index.php/Op_tambah_siswa/asal_sekolah_hapus/'.$row->id_asal_sekolah) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->asal_sekolah ?> ?')">
+                                        href="<?= site_url('Op_tambah_siswa/asal_sekolah_hapus/'.$row->id_asal_sekolah) ?>" onclick="return confirm('Anda yakin menghapus data sekolah <?= $row->asal_sekolah ?> ?')">
                                           <i class="bx bx-trash"></i>
                                         </a>
                                         <a type="button" class="btn btn-primary waves-effect waves-light btn-sm" title="Edit"
-                                        href="<?= site_url('index.php/Op_tambah_siswa/asal_sekolah_edit/'.$row->id_asal_sekolah) ?>">
+                                        href="<?= site_url('Op_tambah_siswa/asal_sekolah_edit/'.$row->id_asal_sekolah) ?>">
                                           <i class="bx bx-pencil"></i>
                                         </a>
-                                        <a type="button" class="btn btn-info waves-effect waves-light btn-sm" title="Lihat"
-                                        href="<?= site_url('index.php/Op_tambah_siswa/asal_sekolah_detail/'.$row->id_asal_sekolah) ?>" >
-                                          <i class="bx bx-search"></i>
-                                        </a>
+                                        
                                     </td>
 
                                 </tr>

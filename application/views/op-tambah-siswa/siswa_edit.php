@@ -53,6 +53,7 @@
                                 <label class="control-label mt-3" for="email">Kompetensi Keahlian Ke-2 :</label>
                                 <select class="form-control" name="id_kompetensi_2" required>
                                 <option value="<?= $row->id_kompetensi_2 ?>">Pilihan Sebelumnya (<?= $row->nama_kompetensi_2 ?>)</option>
+                                <option value="Hanya Pilih 1 Kompetensi Keahlian">Hanya Pilih 1 Kompetensi Keahlian</option>
                                 <?php foreach ($tampil_2 as $row_2) { ?>
                                 <option value="<?= $row_2->id_kompetensi_2 ?>"><?= $row_2->nama_kompetensi_2 ?></option>
                                 <?php } ?>
@@ -75,7 +76,6 @@
                                     <?php foreach ($tampil as $row) { ?>
                                         <option value="<?= $row->asal_sekolah ?>">Pilihan Awal = <?= $row->asal_sekolah ?></option>
                                     <?php } ?>
-                                    <option value="Hanya Pilih 1 Kompetensi Keahlian">Hanya Pilih 1 Kompetensi Keahlian</option>
 
                                     <?php foreach ($tampil_asal_sekolah as $row_1) { ?>
                                         <option value="<?= $row_1->row_asal_sekolah ?>">Pilihan Awal = <?= $row_1->asal_sekolah ?></option>
