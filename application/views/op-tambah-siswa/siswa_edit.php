@@ -75,7 +75,7 @@
                                     <?php } ?>
 
                                     <?php foreach ($tampil_asal_sekolah as $row_1) { ?>
-                                        <option value="<?= $row_1->row_asal_sekolah ?>">Pilihan Awal = <?= $row_1->asal_sekolah ?></option>
+                                        <option value="<?= $row_3->row_asal_sekolah ?>">Pilihan Awal = <?= $row_3->asal_sekolah ?></option>
                                     <?php } ?>
                                 </select>
                             </div>
