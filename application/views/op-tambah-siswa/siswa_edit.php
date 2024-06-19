@@ -70,13 +70,12 @@
                              <div class="form-group mt-3">
                                 <label class="control-label" for="email">Nama Sekolah Asal :</label>
                                 <select class="form-select" name="asal_sekolah" required>
-                                    <?php foreach ($tampil as $row) { ?>
-                                        <option value="<?= $row->asal_sekolah ?>">Pilihan Awal = <?= $row->asal_sekolah ?></option>
-                                    <?php } ?>
-
+                                    <option value="<?= $row->asal_sekolah ?>">Pilihan Awal = <?= $row->asal_sekolah ?></option>
+                                                                                                
                                     <?php foreach ($tampil_asal_sekolah as $row_3) { ?>
-                                        <option value="<?= $row_3->row_asal_sekolah ?>">Pilihan Awal = <?= $row_3->asal_sekolah ?></option>
+                                        <option value="<?= $row_3->asal_sekolah ?>"> <?= $row_3->asal_sekolah ?></option>
                                     <?php } ?>
+                                    
                                 </select>
                             </div>
 
