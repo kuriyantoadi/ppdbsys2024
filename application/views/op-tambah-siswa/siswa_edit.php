@@ -39,7 +39,7 @@
                                 <label class="control-label mt-3" for="email">Kompetensi Keahlian :</label>
                                 
                                 <select class="form-control" name="id_kompetensi_1" required>
-                                                               
+                                <option value="<?= $row->id_kompetensi_1 ?>">Pilihan Sebelumnya (<?= $row->nama_kompetensi_1 ?>)</option>                                                            
                                 <?php foreach ($tampil_1 as $row_1) { ?>
                                 <option value="<?= $row_1->id_kompetensi_1 ?>"><?= $row_1->nama_kompetensi_1 ?></option>
                                 
