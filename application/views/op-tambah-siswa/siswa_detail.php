@@ -100,36 +100,16 @@
                                                         <th>Sekolah Asal</th>
                                                         <td><?= $row->asal_sekolah ?></td>
                                                     </tr>
-                                                    <!-- <tr>
-                                                        <th>Tempat Lahir</th>
-                                                        <td><?= $row->tempat_lahir ?></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Tanggal Lahir</th>
-                                                        <td><?= $row->tgl_lahir ?></td>
-                                                    </tr> -->
+                                                    
                                                     <tr>
                                                         <th>No WA Siswa</th>
                                                         <td><?= $row->no_wa_siswa ?></td>
                                                     </tr>
-                                                    <!-- <tr>
-                                                        <th>Alamat</th>
-                                                        <td><?= $row->alamat ?></td>
-                                                    </tr>
                                                     <tr>
-                                                        <th>Nama Ortu/Wali</th>
-                                                        <td><?= $row->nama_org_tua ?></td>
+                                                        <th>Note Verifikasi</th>
+                                                        <td><?= $row->note_verifikasi ?></td>
                                                     </tr>
-                                                    <tr>
-                                                        <th>No WA Ortu/Wali</th>
-                                                        <td><?= $row->no_wa_org_tua ?></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Bukti Pengajuan Pendaftaran</td>
-                                                        <td>
-                                                            <embed type="application/pdf" src="<?= site_url('assets/upload_file/'.$row->pdf_pengajuan_pendaftaran) ?>" width="80%" height="600px"></embed>
-                                                        </td>
-                                                    </tr> -->
+                                                    
                                                 </tbody>
                                                 <?php } ?>
                                             </table>
