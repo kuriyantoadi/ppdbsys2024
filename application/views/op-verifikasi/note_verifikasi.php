@@ -32,17 +32,17 @@
                              <?= form_open('index.php/Op_ver/note_verifikasi_up') ?>
 
                             <div class="card-header">
-                                <!-- <a href="<?= site_url('index.php/admin/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
-                                <a href="<?= site_url('index.php/admin/siswa_hapus/'.$row->id_siswa) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
-                                <a href="<?= site_url('index.php/admin/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a> -->
+                                <!-- <a href="<?= site_url('index.php/Op_ver/siswa_tampil') ?>" class="btn btn-dark waves-effect waves-light btn-sm">Kembali</a>
+                                <a href="<?= site_url('index.php/Op_ver/siswa_hapus/'.$row->id_siswa) ?>" onclick="return confirm('Anda yakin menghapus data siswa <?= $row->nama_siswa ?> ?')" class="btn btn-danger waves-effect waves-light btn-sm">Hapus</a>
+                                <a href="<?= site_url('index.php/Op_ver/siswa_edit/'.$row->id_siswa) ?>" class="btn btn-info btn-sm waves-effect waves-light">Edit</a> -->
                                  <div class="btn-group" role="group">
                                     <button id="btnGroupVerticalDrop1" type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Opsi <i class="mdi mdi-chevron-down"></i>
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1">
-                                        <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_tidak_sesuai/'.$row->id_siswa) ?>">Tidak Sesuai</a>
-                                        <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_proses/'.$row->id_siswa) ?>">Proses</a>
-                                        <a class="dropdown-item" href="<?= site_url('index.php/Admin/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>
+                                        <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_tidak_sesuai/'.$row->id_siswa) ?>">Tidak Sesuai</a>
+                                        <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_proses/'.$row->id_siswa) ?>">Proses</a>
+                                        <a class="dropdown-item" href="<?= site_url('index.php/Op_ver/ver_data_sesuai/'.$row->id_siswa) ?>">Data Sesuai</a>
                                     </div>
                                 </div>
                             </div>
