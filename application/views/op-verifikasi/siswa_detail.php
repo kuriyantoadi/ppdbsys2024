@@ -100,6 +100,10 @@
                                                         <th>Sekolah Asal</th>
                                                         <td><?= $row->asal_sekolah ?></td>
                                                     </tr>
+                                                    <tr>
+                                                        <th>Note Verifikasi</th>
+                                                        <td><?= $row->note_verifikasi ?></td>
+                                                    </tr>
                                                     <!-- <tr>
                                                         <th>Tempat Lahir</th>
                                                         <td><?= $row->tempat_lahir ?></td>
