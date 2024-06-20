@@ -212,6 +212,12 @@ class M_pendaftar extends CI_Model{
     return $query;
   }
 
+  public function cek_val_nisn($nisn_siswa) {
+    $this->db->where('nisn_siswa', $nisn_siswa);
+    $query = $this->db->get('tb_pendaftar');
+    return $query->num_rows() > 0;
+  }
+
   function cek_no_pendaftaran($no_pendaftaran){
     $this->db->select('*');
     $this->db->from('tb_pendaftar');

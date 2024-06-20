@@ -47,22 +47,26 @@ class Op_tambah_siswa extends CI_Controller
     $this->form_validation->set_rules('nama_siswa','Nama_siswa', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('no_wa_siswa','No_wa_siswa', 'trim|required');
 
+    $nisn_siswa = $this->input->post('nisn_siswa');
+
+    if ($this->M_pendaftar->cek_val_nisn($nisn_siswa)){ 
+      $url = site_url('Op_tambah_siswa/tambah_siswa');
+      echo $this->session->set_flashdata('msg', '
+
+       <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            Mohon maaf, NISN sudah terdaftar.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        ');
+      redirect($url);      
+    } 
+
     if ($this->form_validation->run() == FALSE) {
       echo 'upload error';    
       echo validation_errors();
       exit ();
-
-      // $url = site_url('Daftar/index');
-      // echo $this->session->set_flashdata('msg', '
-
-      //   <div class="alert alert-danger alert-dismissible fade show" role="alert">
-      //    Proses Pendaftaran gagal, silahkan dicoba kembali.
-      //   </div>
-      //   ');
-      // redirect($url);
-
-    } else {
-  
+    }else{ 
 
       // eksekusi query INSERT
       $data_tambah = array(
@@ -72,7 +76,7 @@ class Op_tambah_siswa extends CI_Controller
         'id_kompetensi_2' => set_value('id_kompetensi_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
         'asal_sekolah' => strtoupper(set_value('asal_sekolah')),
-        'nama_siswa'   => set_value('nama_siswa'),
+        'nama_siswa'   => strtoupper(set_value('nama_siswa')),
         'no_wa_siswa'   => set_value('no_wa_siswa'),
         'status_siswa'   => 'siswa',      
         'status_verifikasi'   => 'Proses',
@@ -99,7 +103,6 @@ class Op_tambah_siswa extends CI_Controller
   public function asal_sekolah_tambah_up()
   {
     $this->form_validation->set_rules('asal_sekolah','asal_sekolah', 'trim','required','min_length[3]');   
-   
 
     if ($this->form_validation->run() == FALSE) {
       echo 'upload error';    
@@ -221,7 +224,7 @@ class Op_tambah_siswa extends CI_Controller
         'id_kompetensi_2' => set_value('id_kompetensi_2'),
         'nisn_siswa'   => set_value('nisn_siswa'),
         'asal_sekolah' => strtoupper(set_value('asal_sekolah')),
-        'nama_siswa'   => set_value('nama_siswa'),
+        'nama_siswa'   => strtoupper(set_value('nama_siswa')),
         'tempat_lahir'   => set_value('tempat_lahir'),
         'tgl_lahir'   => set_value('tgl_lahir'),
         'no_wa_siswa'   => set_value('no_wa_siswa'),
