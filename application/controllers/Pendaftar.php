@@ -20,11 +20,11 @@ class Pendaftar extends CI_Controller
   {
     $data['tampil'] = $this->M_pendaftar->ver_semua();
 
-    // $this->load->view('template/header-pendaftar.php');
-    // $this->load->view('pendaftar/verifikasi', $data);
-    // $this->load->view('template/footer-pendaftar.php');
+    $this->load->view('template/header-pendaftar.php');
+    $this->load->view('pendaftar/verifikasi', $data);
+    $this->load->view('template/footer-pendaftar.php');
 
-    $this->load->view('maintenance');
+    // $this->load->view('maintenance');
 
     
   }

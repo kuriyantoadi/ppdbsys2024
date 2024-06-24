@@ -11,10 +11,10 @@
           </center>
         
           <center>
-            <h4><b>Verifikasi dan Seleksi Administrasi</b></h4>
+            <h4><b>Tes Akademik, Tes Khusus dan Tes Wawancara</b></h4>
           </center>
           <center>
-            <h5><b>Tahun Ajaran 2023/2024</b></h4>
+            <h5><b>Tahun Ajaran 2024/2025</b></h4>
           </center>
           <br>
           <!-- font ganti jenis -->
@@ -54,9 +54,9 @@
               <th><center>Nama Lengkap</th>
               <th><center>Kompetensi Keahlian</th>
               <th><center>Asal Sekolah</th>
-              <th><center>Verifikasi</th>
-              <th><center>Seleksi Administrasi</th>
-
+              <th><center>Tes Akademik</th>
+              <th><center>Tes Khusus</th>
+              <th><center>Tes Wawncara</th>
           </tr>
       </thead>
 
@@ -71,25 +71,27 @@
               <td><center><?= $row->nama_kompetensi_1 ?></td>
               <td><center><?= $row->asal_sekolah ?></td>
               <td><center>
-                <?php if($row->status_verifikasi == 'Data Sesuai' ){ ?>
-                      <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sesuai</a>
-                <?php }elseif($row->status_verifikasi == 'Proses'){ ?>
-                      <a class="btn-info waves-effect waves-light btn-sm btn-sm btn-rounded">Proses</a>
-                <?php }elseif($row->status_verifikasi == 'Tidak Sesuai'){ ?>
-                    <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Tidak Sesuai</a>
+                <?php if($row->status_tes_akademik == 'Sudah Tes' ){ ?>
+                      <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah Tes</a>                
                 <?php }else{ ?>
-                    <a class="btn-secondary btn-sm btn-rounded">Menunggu</a>
+                    <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Belum Tes</a>
                 <?php } ?>
               </td>
 
               <td><center>
-              <?php if($row->status_seleksi_administrasi == 'Data Sesuai' ){ ?>
-                        <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Data Sesuai</a>
-                  <?php }elseif($row->status_seleksi_administrasi == 'Belum Seleksi'){ ?>
-                        <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Belum Seleksi</a>
-                  <?php }else{ ?>
-                      <a class="btn-secondary btn-sm btn-rounded">Kosong</a>
-                  <?php } ?>
+                <?php if($row->status_tes_khusus == 'Sudah Tes' ){ ?>
+                      <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah Tes</a>                
+                <?php }else{ ?>
+                    <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Belum Tes</a>
+                <?php } ?>
+              </td>
+
+               <td><center>
+                <?php if($row->status_tes_wawancara == 'Sudah Tes' ){ ?>
+                      <a class="btn-success waves-effect waves-light btn-sm btn-sm btn-rounded">Sudah Tes</a>                
+                <?php }else{ ?>
+                    <a class="btn-danger waves-effect waves-light btn-sm btn-sm btn-rounded">Belum Tes</a>
+                <?php } ?>
               </td>
             
           </tr>

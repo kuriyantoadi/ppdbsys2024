@@ -33,7 +33,7 @@
 
     <body>
     <!-- <nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color: #e3f2fd" > -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" >
 
         <div class="container">
                 <a class="navbar-brand" href="#">PPDBSYS</a>
@@ -43,10 +43,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <a href="<?= site_url('index.php/pendaftar/') ?>" class="btn btn-sm btn-primary m-1" type="button">Verifikasi dan Seleksi Administrasi</a>
                     <a href="<?= site_url('index.php/pendaftar/aka_semua') ?>" class="btn btn-sm btn-info m-1" type="button">Seleksi Akademik</a>
-                    <!-- <a href="<?= site_url('index.php/pendaftar/wan_semua') ?>" class="btn btn-sm btn-success m-1" type="button">Seleksi Wawancara</a> -->
+                    <a href="<?= site_url('index.php/pendaftar/wan_semua') ?>" class="btn btn-sm btn-success m-1" type="button">Seleksi Wawancara</a>
             </div>
         </div>
-    </nav>
+    </nav> -->
         
 
             
