@@ -32,15 +32,15 @@
 
       <div class="col-12 ">
           <?= $this->session->flashdata('msg') ?>
-          <!-- <a href="<?= site_url('index.php/pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a> -->
+          <!-- <a href="<?= site_url('pendaftar/upload_pengajuan') ?>" type="button" class="btn btn-info btn-sm mb-2">Upload Pengajuan Pendaftaran</a> -->
           <br><div class="btn-group" role="group" aria-label="Basic example">
-              <a href="<?= site_url('index.php/pendaftar/') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
-              <a href="<?= site_url('index.php/pendaftar/akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
-              <a href="<?= site_url('index.php/pendaftar/mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
-              <a href="<?= site_url('index.php/pendaftar/tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
-              <a href="<?= site_url('index.php/pendaftar/pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
-              <a href="<?= site_url('index.php/pendaftar/to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
-              <a href="<?= site_url('index.php/pendaftar/tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
+              <a href="<?= site_url('pendaftar/') ?>" type="button" class="btn btn-primary btn-sm">Semua Jurusan</a>
+              <a href="<?= site_url('pendaftar/akl') ?>" type="button" class="btn btn-primary btn-sm">AKL</a>
+              <a href="<?= site_url('pendaftar/mplb') ?>" type="button" class="btn btn-primary btn-sm">MPLB</a>
+              <a href="<?= site_url('pendaftar/tjkt') ?>" type="button" class="btn btn-primary btn-sm">TJKT</a>
+              <a href="<?= site_url('pendaftar/pplg') ?>" type="button" class="btn btn-primary btn-sm">PPLG</a>
+              <a href="<?= site_url('pendaftar/to') ?>" type="button" class="btn btn-primary btn-sm">TO</a>
+              <a href="<?= site_url('pendaftar/tm') ?>" type="button" class="btn btn-primary btn-sm">TM</a>
           </div>
       </div><!-- end col -->
     </div><!-- end row -->
