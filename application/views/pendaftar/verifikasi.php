@@ -68,7 +68,7 @@
           <tr>
               <td><center><?= $no++ ?></td>
               <td><?= $row->nama_siswa ?></td>
-              <td><center><?= $row->nama_kompetensi_1 ?></td>
+              <td><center><?= $row->short_kompetensi_1 ?></td>
               <td><center><?= $row->asal_sekolah ?></td>
               <td><center>
                 <?php if($row->status_tes_akademik == 'Sudah Tes' ){ ?>
